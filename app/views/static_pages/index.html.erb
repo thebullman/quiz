@@ -1,3 +1,18 @@
 <h1>"The %$@Q%%@ Pen is Blue"</h1>
 <h3>Jim Carry - Liar Liar</h3>
+<br />
+<h2>List of times when a user registered, for an unknown reason:</h2>
+<h4><% @users.each do |user| %></h4>
+<h5><%= user.created_at %></h5>
+    <% end %>
+<br class="clr" />
 
+  <% if user_signed_in? %>
+    <%= link_to 'Submit a message', new_submission_path %>
+    <br />
+    <br />
+    <h3>Submitted Messages:</h3>
+    <% @submission.each do |submission| %>
+    <h5><%= submission.message %></h5><br />
+    <% end %>
+  <% end %> 
