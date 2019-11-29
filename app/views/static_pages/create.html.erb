@@ -1,0 +1,9 @@
+<div class="purdy-box col-10 offset-1">
+<h5>Enter message to be added</h5>
+  <%= simple_form_for @submission do |f| %>
+    <%= f.input :message %>
+    <br />
+    <%= f.submit 'Submit' %>
+  <% end %>
+<% end %>
+</div>
